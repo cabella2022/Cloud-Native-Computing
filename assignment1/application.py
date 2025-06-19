@@ -17,7 +17,7 @@ def greetings():
 # Read contents of "hostfolder" and return the contents
 @app.route("/listcontents")
 def list_contents():
-    folder_path = "/hostfolder"
+    folder_path = "\Program Files\Git\hostfolder"
     if os.path.exists(folder_path) and os.path.isdir(folder_path):
         files = os.listdir(folder_path)
         return {"files" : files}

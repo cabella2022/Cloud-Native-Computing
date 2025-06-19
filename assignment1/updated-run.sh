@@ -8,7 +8,7 @@
 # And don't forget to make the updated-run.sh script executable (chmod +x updated-run.sh)
 GREETING_VALUE=${1:-"Spring was earlier."}
 docker run -p 5001:5001 -d \
-  -v "$(pwd)":/hostfolder \
   -e GREETING="$GREETING_VALUE" \
-  --name assignment1-container \
+  -v "/c/Users/cabal/Cloud-Native-Computing/assignment1":/hostfolder \
+  --name container2 \
   isa270-assignment1:latest
